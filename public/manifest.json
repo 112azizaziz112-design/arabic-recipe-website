@@ -1,0 +1,21 @@
+{
+  "name": "وصفات أم سعيد",
+  "short_name": "وصفات",
+  "description": "أشهى الوصفات العربية من كل الدول",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C8102E",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
