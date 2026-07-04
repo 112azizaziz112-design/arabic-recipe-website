@@ -76,6 +76,11 @@ export default async function RecipePage({
               <ChefHat className="size-5 text-primary" />
               {recipe.difficulty}
             </span>
+            {recipe.category && (
+  <span className="flex items-center gap-2 rounded-lg bg-secondary px-4 py-2 font-medium text-secondary-foreground">
+    {recipe.category}
+  </span>
+)}
           </div>
 
           {user && <FavoriteButton recipeId={recipe.id} isFavorite={isFavorite} />}
