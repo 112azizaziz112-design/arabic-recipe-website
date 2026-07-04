@@ -1,13 +1,24 @@
-// app/add-recipe/page.tsx
 import { PrismaClient } from '@prisma/client'
 import { redirect } from 'next/navigation'
+import { getCurrentUser } from '@/lib/auth'
 const prisma = new PrismaClient()
 
 export default async function AddRecipePage() {
+  const user = await getCurrentUser()
+  
+  if (!user) {
+    redirect('/login')
+  }
+
   const countries = await prisma.country.findMany({ orderBy: { name: 'asc' } });
 
   async function createRecipe(formData: FormData) {
     'use server'
+    const user = await getCurrentUser()
+    if (!user) {
+      redirect('/login')
+    }
+
     await prisma.recipe.create({
       data: {
         title: formData.get('title') as string,
