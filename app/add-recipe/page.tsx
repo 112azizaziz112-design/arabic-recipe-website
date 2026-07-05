@@ -42,7 +42,7 @@ export default async function AddRecipePage() {
         <input name="title" placeholder="اسم الوصفة" required className="border p-2 w-full rounded" />
         <input name="image" placeholder="رابط الصورة" required className="border p-2 w-full rounded" />
         
-        <select name="category" required className="border p-2 w-full rounded">
+        <select name="category" required className="border p-2 w-full rounded text-black bg-white">
           <option value="">اختاري التصنيف</option>
           <option value="أطباق رئيسية">أطباق رئيسية</option>
           <option value="مقبلات">مقبلات</option>
@@ -63,7 +63,7 @@ export default async function AddRecipePage() {
           <option value="صوصات">صوصات</option>
         </select>
 
-        <select name="countryId" required className="border p-2 w-full rounded">
+        <select name="countryId" required className="border p-2 w-full rounded text-black bg-white">
           <option value="">اختاري الدولة</option>
           {countries.map((c) => (
             <option key={c.id} value={c.id}>{c.name}</option>
@@ -71,7 +71,7 @@ export default async function AddRecipePage() {
         </select>
 
         <input name="time" type="number" placeholder="الوقت بالدقائق" required className="border p-2 w-full rounded" />
-        <select name="difficulty" required className="border p-2 w-full rounded">
+        <select name="difficulty" required className="border p-2 w-full rounded text-black bg-white">
           <option value="">اختاري الصعوبة</option>
           <option value="سهل">سهل</option>
           <option value="متوسط">متوسط</option>
